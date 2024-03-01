@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-body">
+    
+      <h1>Department Create</h1>
+      <form [formGroup]="formbuilds" (ngSubmit)="createDepartment()" class="row g-3">
+      
+        <div class="col-md-6">
+          <label for="departmentName" class="form-label">Department:</label>
+          <input type="text" class="form-control" id="departmentName" formControlName="departmentName">
+        </div>
+        <div class="col-md-6">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location" formControlName="location">
+        </div>
+        <div class="col-12 mt-3">
+          <button type="submit" class="btn btn-outline-primary" >Save</button>
+          <button type="submit" class="btn btn-outline-primary" (click)="goto()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

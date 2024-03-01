@@ -1,0 +1,80 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+table {
+  width: 600px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 150px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+button.edit, button.delete {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+form .col-12 button {
+  margin-right: 10px;
+}
+
+button.delete {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.text-danger {
+  color: #dc3545;
+  margin-top: 5px;
+}

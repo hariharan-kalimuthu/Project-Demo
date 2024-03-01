@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-body">
+      <h1>Employee Create</h1>
+      <form [formGroup]="formbuilds" (ngSubmit)="createEmployee()" class="row g-3">
+
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First Name:</label>
+          <input type="text" class="form-control" id="firstName" formControlName="firstName">
+          <div *ngIf="formbuilds.get('firstName')?.invalid && formbuilds.get('firstName')?.touched"
+            class="text-danger">
+            Please ensure accurate input for FirstName
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" formControlName="lastName">
+          <div *ngIf="formbuilds.get('lastName')?.invalid && formbuilds.get('lastName')?.touched"
+            class="text-danger">
+            Please ensure accurate input for lastName
+          </div>
+        </div>
+   
+        <div class="col-md-6">
+          <label for="departmentId" class="form-label">Department:</label>
+          <select class="form-control" id="departmentId" formControlName="departmentId">
+            <option *ngFor="let department of departments" [value]="department.departmentID">
+              {{ department.departmentName }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label for="salary" class="form-label">Salary:</label>
+          <input type="number" class="form-control" id="salary" formControlName="salary">
+          <div *ngIf="formbuilds.get('salary')?.invalid && formbuilds.get('salary')?.touched"
+            class="text-danger">
+            Please ensure accurate input for salary
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="dateOfBirth" class="form-label">Date of Birth:</label>
+          <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+          <div *ngIf="formbuilds.get('dateOfBirth')?.invalid && formbuilds.get('dateOfBirth')?.touched"
+            class="text-danger">
+            Please ensure accurate input for Date Of Birth
+          </div>
+        </div>
+
+  
+        <div class="col-12 mt-3">
+          <button type="submit" class="btn btn-primary">Create Employee</button>
+          <button class="btn btn-outline-primary" (click)="goToEmployeePage()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
